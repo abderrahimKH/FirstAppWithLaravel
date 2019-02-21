@@ -2,7 +2,9 @@
 
 
 @section('content')
-
+     @if(Session::has('deleted_user'))
+        <p class="bg-danger"> {{Session('deleted_user')}}</p> <!-- message confir delete -->
+      @endif
     <h1>Users</h1>
      <table class="table">
          <thead>

@@ -2,6 +2,7 @@
 @extends('layouts.admin')
 @section('content')
      <h1> Create Users</h1>
+     <div class="rows">
   {!! Form::open(['method'=>'Post','action'=>'AdminUsersController@store','files'=>true]) !!}
      {{csrf_field()}}
     <div class="form-group">
@@ -33,6 +34,10 @@
      </div>
 
     {!! Form::close() !!}
+    </div>
 
-    @include('includes.form_error')
+     <div class="rows">
+         @include('includes.form_error')
+
+
   @stop
